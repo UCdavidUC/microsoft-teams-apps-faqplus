@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "baseResourceName": {
@@ -58,7 +58,7 @@
     "appIconUrl": {
       "type": "string",
       "minLength": 1,
-      "defaultValue": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-apps-faqplus/master/Manifest/color.png",
+      "defaultValue": "https://raw.githubusercontent.com/UCdavidUC/microsoft-teams-apps-faqplus/master/Manifest/color.png",
       "metadata": {
         "description": "The link to the icon for the app. It must resolve to a PNG file."
       }
@@ -75,11 +75,13 @@
     "sku": {
       "type": "string",
       "allowedValues": [
+        "Free",
+        "Shared",
         "Basic",
         "Standard",
         "Premium"
       ],
-      "defaultValue": "Standard",
+      "defaultValue": "Free",
       "metadata": {
         "description": "The pricing tier for the hosting plan."
       }
@@ -91,7 +93,7 @@
         "2",
         "3"
       ],
-      "defaultValue": "2",
+      "defaultValue": "1",
       "metadata": {
         "description": "The size of the hosting plan (small, medium, or large)."
       }
@@ -109,7 +111,7 @@
         "F0 (3 managed documents per month, 3 transactions per second, 100 transactions per minute, 50K transactions per month)",
         "S0 ($10 per month for unlimited documents, 3 transactions per second, 100 transactions per minute)"
       ],
-      "defaultValue": "S0 ($10 per month for unlimited documents, 3 transactions per second, 100 transactions per minute)",
+      "defaultValue": "F0 (3 managed documents per month, 3 transactions per second, 100 transactions per minute, 50K transactions per month)",
       "metadata": {
         "description": "The pricing tier for the QnAMaker service."
       }
@@ -122,7 +124,7 @@
         "S (50 indexes)",
         "S2 (200 indexes)"
       ],
-      "defaultValue": "B (15 indexes)",
+      "defaultValue": "F (3 indexes)",
       "metadata": {
         "description": "The pricing tier for the Azure Search service."
       }
@@ -132,7 +134,7 @@
       "metadata": {
         "description": "The URL to the GitHub repository to deploy."
       },
-      "defaultValue": "https://github.com/OfficeDev/microsoft-teams-apps-faqplus.git"
+      "defaultValue": "https://github.com/UCdavidUC/microsoft-teams-apps-faqplus.git"
     },
     "gitBranch": {
       "type": "string",
