@@ -75,15 +75,13 @@
     "sku": {
       "type": "string",
       "allowedValues": [
-        "Free",
-        "Shared",
         "Basic",
         "Standard",
         "Premium"
       ],
-      "defaultValue": "Free",
+      "defaultValue": "Basic",
       "metadata": {
-        "description": "The pricing tier for the hosting plan."
+        "description": "The pricing tier for the hosting plan. Requires Always On feature to be enabled."
       }
     },
     "planSize": {
